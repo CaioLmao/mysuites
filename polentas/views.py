@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
+from django.views.generic import ListView, DetailView
+from .models import *
 
-# Create your views here.
+class IndexView (ListView):
+   model = Membro
+   template_name= "index.html"
+   context_object_name = 'polentas'
